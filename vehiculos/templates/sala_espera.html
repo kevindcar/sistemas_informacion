@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Waiting Room</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:#0056b3;
+            background-size: cover;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color:#007bff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 80%;
+            max-width: 600px; /* Reducido el ancho máximo para centrar mejor el contenido */
+        }
+
+        h2 {
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 400px; /* Ajustar el ancho máximo del formulario */
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 18px;
+            color: #343a40;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+            box-sizing: border-box;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 40px; /* Ajustar el padding para hacer el botón más grande */
+            font-size: 16px;
+            color: white;
+            background-color: #0d5fb6;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" action="{% url 'home' %}">
+        <h2>Ingresa tu auto preferido y tiempo de alquiler</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="rental_time">Tiempo de Alquiler (días):</label>
+                <input type="number" id="rental_time" name="rental_time" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="car">Auto Preferido:</label>
+                <select id="car" name="car" required>
+                    <option value="">Selecciona un auto...</option>
+                    <option value="Toyota Supra">Toyota Supra</option>
+                    <option value="Honda Civic">Honda Civic</option>
+                    <option value="Ford Mustang">Ford Mustang</option>
+                    <option value="Chevrolet Tahoe">Chevrolet Tahoe</option>
+                    <option value="BMW 3 Series">BMW 3 Series</option>
+                </select>
+            </div>
+            <button type="submit" class="button"><a href="{% url 'vehiculos' %}" class="button">Enviar</a></button>
+        </form>
+        <a href="{% url 'home' %}" class="button" >Inicio</a>
+    </div>
+</body>
+</html>

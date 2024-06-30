@@ -1,0 +1,6 @@
+<form action="{% url 'home' %}" method="post" style=" background-color: #0056b3;" >
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" style="color: rgb(3, 24, 24);">Signup</button>
+</form>
+ 

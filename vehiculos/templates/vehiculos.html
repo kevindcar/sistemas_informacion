@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Vehiculos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:#0056b3;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #0a0b0c;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; /* Ajusta el espacio entre columnas */
+        }
+
+        li {
+            background-color: #ffffff;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: calc(33.33% - 20px); /* Calcula el ancho de cada elemento para que haya 3 por fila */
+            box-sizing: border-box;
+        }
+
+        li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .vehicle-info {
+            display: flex;
+            flex-direction: column; /* Ajusta la disposición del contenido dentro de cada vehículo */
+            height: 100%; /* Ajusta la altura del contenido para alinear correctamente */
+        }
+
+        .vehicle-details {
+            font-size: 18px;
+            color: #343a40;
+            margin-bottom: 10px;
+        }
+
+        .vehicle-price {
+            font-size: 18px;
+            color: #007bff;
+        }
+
+        .vehicle-image {
+            margin-top: 10px;
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .features {
+            margin-top: 10px;
+            color: #6c757d;
+        }
+
+        a.button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        a.button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Vehiculos disponibles para alquiler</h2>
+    <ul>
+        <li>
+            <div class="vehicle-info">
+                <span class="vehicle-details">
+                    <strong>Toyota Supra (2020)</strong><br>
+                    Motor: 3.0L Twin-Scroll Turbocharged Inline-6<br>
+                    Caballos de potencia: 382 HP<br>
+                    Velocidad final: 250 km/h<br>
+                    <div class="features">
+                        - Coginería de cuero premium<br>
+                        - Conducción deportiva y cómoda<br>
+                        - Sistema de sonido premium<br>
+                        - Asientos eléctricos ajustables<br>
+                        <strong>Transmisión:</strong> Automática<br>
+                        <strong>Modos de manejo:</strong> Sport, Normal, Eco<br>
+                        <strong>Beneficios de seguridad:</strong> Control de estabilidad, frenos ABS
+                    </div>
+                </span>
+                <span class="vehicle-price">$50/day</span>
+                <img src=""  alt="Toyota Supra" class="vehicle-image">
+            </div>
+        </li>
+        <li>
+            <div class="vehicle-info">
+                <span class="vehicle-details">
+                    <strong>Honda Civic (2019)</strong><br>
+                    Motor: 1.5L Turbocharged Inline-4<br>
+                    Caballos de potencia: 174 HP<br>
+                    Velocidad final: 220 km/h<br>
+                    <div class="features">
+                        - Interior espacioso y ergonómico<br>
+                        - Excelente economía de combustible<br>
+                        - Sistema de infoentretenimiento avanzado<br>
+                        - Seguridad mejorada con Honda Sensing<br>
+                        <strong>Transmisión:</strong> Automática<br>
+                        <strong>Modos de manejo:</strong> Normal, Eco<br>
+                        <strong>Beneficios de seguridad:</strong> Asistente de mantenimiento de carril, frenado automático de emergencia
+                    </div>
+                </span>
+                <span class="vehicle-price">$45/day</span>
+                <img src="static/img/img2.jpg" alt="Honda Civic" class="vehicle-image">
+            </div>
+        </li>
+        <li>
+            <div class="vehicle-info">
+                <span class="vehicle-details">
+                    <strong>Ford Mustang (2021)</strong><br>
+                    Motor: 5.0L V8<br>
+                    Caballos de potencia: 450 HP<br>
+                    Velocidad final: 250 km/h<br>
+                    <div class="features">
+                        - Diseño clásico y potencia impresionante<br>
+                        - Interior lujoso con acabados de alta calidad<br>
+                        - Conducción suave y controlable<br>
+                        - Tecnología avanzada de asistencia al conductor<br>
+                        <strong>Transmisión:</strong> Manual<br>
+                        <strong>Modos de manejo:</strong> Sport, Track, Normal<br>
+                        <strong>Beneficios de seguridad:</strong> Control de tracción, sistema de monitorización de presión de neumáticos
+                    </div>
+                </span>
+                <span class="vehicle-price">$70/day</span>
+                <img src="static/img/img3.jpg" alt="Ford Mustang" class="vehicle-image">
+            </div>
+        </li>
+        <li>
+            <div class="vehicle-info">
+                <span class="vehicle-details">
+                    <strong>Chevrolet Tahoe (2018)</strong><br>
+                    Motor: 5.3L V8<br>
+                    Caballos de potencia: 355 HP<br>
+                    Velocidad final: 210 km/h<br>
+                    <div class="features">
+                        - Espacio para hasta 9 pasajeros<br>
+                        - Comodidad superior en largos viajes<br>
+                        - Seguridad robusta y confiable<br>
+                        - Tecnología de conectividad avanzada<br>
+                        <strong>Transmisión:</strong> Automática<br>
+                        <strong>Modos de manejo:</strong> Normal, Snow, Tow/Haul<br>
+                        <strong>Beneficios de seguridad:</strong> Alerta de colisión frontal, cámara de visión trasera
+                    </div>
+                </span>
+                <span class="vehicle-price">$60/day</span>
+                <img src="static/img/img4.jpg" alt="Chevrolet Tahoe" class="vehicle-image">
+            </div>
+        </li>
+        <li>
+            <div class="vehicle-info">
+                <span class="vehicle-details">
+                    <strong>BMW 3 Series (2022)</strong><br>
+                    Motor: 2.0L TwinPower Turbo Inline-4<br>
+                    Caballos de potencia: 255 HP<br>
+                    Velocidad final: 250 km/h<br>
+                    <div class="features">
+                        - Elegancia y rendimiento en cada detalle<br>
+                        - Interior sofisticado y tecnológico<br>
+                        - Conducción deportiva con confort premium<br>
+                        - Innovaciones en seguridad y asistencia al conductor<br>
+                        <strong>Transmisión:</strong> Automática<br>
+                        <strong>Modos de manejo:</strong> Comfort, Sport, Eco Pro<br>
+                        <strong>Beneficios de seguridad:</strong> Asistente de aparcamiento, sistema de advertencia de salida de carril
+                    </div>
+                </span>
+                <span class="vehicle-price">$80/day</span>
+                <img src="static/img/img5.jpg" alt="BMW 3 Series" class="vehicle-image">
+            </div>
+        </li>
+        <li>
+            <div class="vehicle-info">
+                <span class="vehicle-details">
+                    <strong>Mercedes Benz C-Class (2023)</strong><br>
+                    Motor: 2.0L Inline-4 Turbocharged<br>
+                    Caballos de potencia: 255 HP<br>
+                    Velocidad final: 240 km/h<br>
+                    <div class="features">
+                        - Lujo y confort excepcionales<br>
+                        - Tecnología avanzada MBUX<br>
+                        - Diseño elegante y aerodinámico<br>
+                        - Seguridad integral con Mercedes-Benz Intelligent Drive<br>
+                        <strong>Transmisión:</strong> Automática<br>
+                        <strong>Modos de manejo:</strong> Comfort, Sport, Eco<br>
+                        <strong>Beneficios de seguridad:</strong> Asistente de frenado activo, control de crucero adaptativo
+                    </div>
+                </span>
+                <span class="vehicle-price">$90/day</span>
+                <img src="static/img/mercedes.jpg" alt="Mercedes Benz C-Class" class="vehicle-image">
+            </div>
+        </li>
+        
+        <!-- Agrega más <li> con el mismo formato para otros vehículos -->
+    </ul>
+    <div class="nav-links">
+        <a href="{% url 'sala_espera' %}" class="button">Waiting Room</a>
+        <br>
+        <a href="{% url 'home' %}" class="button">Home</a>
+    </div>
+</body>
+</html>
